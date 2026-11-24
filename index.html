@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scientific Calculator</title>
+  <meta name="description" content="A secure scientific calculator built with vanilla JavaScript and a custom expression parser (no eval).">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="calc" aria-label="Scientific calculator">
+      <div class="display" role="status" aria-live="polite">
+        <div class="display-top">
+          <button id="mode" class="badge" title="Toggle degrees / radians">DEG</button>
+          <span class="brand">SCI-CALC // secure parser</span>
+        </div>
+        <div id="expr" class="expr"></div>
+        <div id="result" class="result">0</div>
+      </div>
+      <div class="keys">
+        <div id="sci" class="grid sci"></div>
+        <div id="basic" class="grid basic"></div>
+      </div>
+    </section>
+    <aside id="history" class="history" aria-label="Calculation history">
+      <header><h2>History</h2><button id="clear-history" class="link">Clear history</button></header>
+      <ul id="history-list"></ul>
+    </aside>
+  </main>
+  <script src="js/scientific.js"></script>
+  <script src="js/history.js"></script>
+  <script src="js/calculator.js"></script>
+</body>
+</html>
